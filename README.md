@@ -17,7 +17,7 @@
 git clone https://github.com/f88643/Random-Password-Generator-.git
 
 ```
-2.前往資料夾URLshortener
+2.前往資料夾Random-Password-Generator
 ```
 cd Random-Password-Generator-/
 ```
