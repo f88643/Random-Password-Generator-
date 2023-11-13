@@ -14,12 +14,12 @@
 
 1.複製檔案
 ```
-git clone https://github.com/f88643/URLshortener.git
+git clone https://github.com/f88643/Random-Password-Generator-.git
 
 ```
 2.前往資料夾URLshortener
 ```
-cd URLshortener/
+cd codeGenerator/
 ```
 3.安裝套件
 ```
