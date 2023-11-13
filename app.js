@@ -62,8 +62,7 @@ function genNum(info) {
   if (info.symbol) {
     list.push(...listSym)
   }
-  console.log(list)
-  if (list = []) {
+  if (list.length === 0) {
     password = "You must select at least one character set"
     return;
   }
