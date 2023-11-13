@@ -19,7 +19,7 @@ git clone https://github.com/f88643/Random-Password-Generator-.git
 ```
 2.前往資料夾URLshortener
 ```
-cd codeGenerator/
+cd Random-Password-Generator-/
 ```
 3.安裝套件
 ```
