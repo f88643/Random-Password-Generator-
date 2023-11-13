@@ -1,0 +1,107 @@
+<nav class="navbar " style="background-color:rgb(106, 117, 126)">
+  <div class="container-fluid">
+    <a class="navbar-brand mb-0 h1" style="color:white" href="/">Random Password Generator <i
+        class="fa-solid fa-key"></i></a>
+  </div>
+</nav>
+<div class="space" style="border-top: 80px solid rgb(50, 57, 64)"></div>
+<div class="container-md" style="background-color: white; border-radius:5px">
+  <form action="/codePage" method="POST">
+    <div class="row gy-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-5">
+            <label for="inputPasswordLength" class="col-form-label">Password Length</label>
+          </div>
+          <div class="col-6">
+            <input class="form-control" type="number" name='inputPasswordLength' id="inputPasswordLength" min='4'
+              max='16' value='{{info.inputPasswordLength}}' class="form-control" aria-describedby="inputPasswordLength">
+            <div id="inputPasswordLength" class="form-text">
+              Length is available between 4 ~ 16
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-5">
+            Include Lowercase characters
+          </div>
+          <div class="col-6">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="lowerCase" id="lowerCase" value="lowerCase" {{#if
+                info.lowerCase}}checked{{/if}}>
+              <label class="form-check-label" for="lowerCase">
+                (e.g. abcdefg)
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-5">
+            Include Uppercase characters
+          </div>
+          <div class="col-6">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="upperCase" id="upperCase" value="upperCase" {{#if
+                info.upperCase}}checked{{/if}} <label class="form-check-label" for="upperCase">
+              (e.g. ABCDEFG)
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-5">
+            Include Numbers
+          </div>
+          <div class="col-6">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="number" id="number" value="number" {{#if
+                info.number}}checked{{/if}} <label class="form-check-label" for="number">
+              (e.g. 123456)
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-5">
+            Include Symbols
+          </div>
+          <div class="col-6">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="symbol" id="symbol" value="symbol" {{#if
+                info.symbol}}checked{{/if}} <label class="form-check-label" for="symbol">
+              (e.g. !@#$%^&*)
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-5">
+            <label for="excludeCharacters" class="col-form-label">Exclude Characters</label>
+          </div>
+          <div class="col-6">
+            <input class="form-control" type="text" name="excludeCharacters" id="excludeCharacters"
+              value="{{info.excludeCharacters}}" aria-describedby="excludeCharacters">
+            <div id="inputPasswordLength" class="form-text">
+              These characters will not appear in the password
+            </div>
+          </div>
+        </div>
+        <div class="col" style="background-color: rgb(202,236,242);padding: 1rem; margin: 1rem; border-radius: 5px">
+          <span>Your password is: </span> <span style="color:rgb(247,56,154)">{{password}}</span>
+        </div>
+        <button type=" submit" class="btn btn-primary" style="margin: 1rem">Generate Password</button>
+      </div>
+    </div>
+  </form>
+
+</div>
