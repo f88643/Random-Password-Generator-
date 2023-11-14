@@ -50,18 +50,16 @@ function genNum(info) {
   if (info.symbol) {
     list.push(...listSym)
   }
-  console.log(list.length)
   if (list.length === 0) {
     password = "You must select at least one character set"
     return (password);
   }
-  console.log(list)
   for (let z = 0; z < info.excludeCharacters.length; z++) {
     filteredList = list.filter(item => item != info.excludeCharacters[z]);
     list = filteredList
   }
   if (list.length === 0) {
-    password = "Too many exclude Characters"
+    password = "Too many exclude Characters."
     return (password);
   }
   if (info.inputPasswordLength) {
